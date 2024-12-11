@@ -1,0 +1,114 @@
+html {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-container {
+	background-color: darkgray;
+	width: 100px;
+	margin: auto;
+	padding: 100px 40px;
+}
+.wrapper {
+	width: 400px;
+	/* background-color: lightslategray; */
+	margin: 20px auto;
+	padding: 20px;
+}
+
+.tes {
+	background-color: aqua;
+}
+.disabled-date {
+	background-color: #ff0000; /* Use a light gray background color */
+	color: #000000; /* Use a lighter text color */
+}
+.ticket {
+	width: 250px; 
+	height: 300px; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/* .main-image {
+	width: 800px;
+	height: 600px;
+} */
+/* test */
+.color-bg {
+	background-color: aqua;
+}
+
+    /* Additional styles specific to the print layout */
+	@media print {
+		@page {
+			size: 6cm 7.8cm;
+			margin: 6px;
+			padding: 0;
+		}
+
+		/* html,
+		body {
+			width: 10cm;
+			height: 6cm;
+		} */
+
+		.container {
+			visibility: hidden;
+		}
+
+		.ticket-print {
+			/* Add any additional print-specific styles here = 7,5cm x 8,5cm */
+			/* 10cm x 6 cm */
+			width: 250px;
+			height: 300px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			padding: 0;
+			margin: 0;
+			border: 1px solid black;
+		}
+	}
+
+
+/* Style date picker / date input */
+/* input[type="date"] {
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 16px;
+} */
+
+
+/* Style the date picker arrow button */
+/* input[type="date"]::-webkit-calendar-picker-indicator { */
+	/* background: transparent; */
+	/* color: #333; Color of the arrow */
+	/* cursor: pointer; */
+/* } */
+
+/* Style the calendar panel that appears */
+/* input[type="date"]::-webkit-calendar-picker-popup {
+	background: #fff;
+} */
+
+/* input[type="date"]{
+    background-color: #0080ff;
+    padding: 15px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    font-family: "Roboto Mono",monospace;
+    color: #b01414;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+} */
+/* ::-webkit-calendar-picker-indicator{
+    background-color: #28e044;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+} */
