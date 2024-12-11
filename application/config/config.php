@@ -35,7 +35,7 @@ $config['base_url'] = $root;
 
 // $config['base_url'] = 'http://103.184.180.109/:';
 // $config['base_url'] = 'https://antrianrsudcaruban.com';
- $config['base_url'] = 'http://localhost/antrian-loket-online';
+//$config['base_url'] = 'http://localhost/antrian-loket-online';
 // $config['base_url'] = 'http://10.40.1.82:8080';
 
 // In a separate file, e.g., application/config/custom_config.php
