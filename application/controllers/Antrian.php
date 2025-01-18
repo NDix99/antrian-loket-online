@@ -169,7 +169,7 @@ class Antrian extends CI_Controller
                     'date_visit' => $date_visit,
                     'no_antrian' => $no_antrian,
                     'phone' => $phone,
-                    'created_at' => date('Y-m-d H:i:s'),
+                 // 'created_at' => date('Y-m-d H:i:s'),
                     'status_antrian' => 0
                 );
 
@@ -309,7 +309,7 @@ class Antrian extends CI_Controller
             'date_visit' => $date_visit,
             'no_antrian' => $no_antrian,
             'phone' => $phone,
-            'created_at' => date('Y-m-d H:i:s'),
+            // 'created_at' => date('Y-m-d H:i:s'),
             'status_antrian' => 0
         );
 
@@ -401,9 +401,9 @@ class Antrian extends CI_Controller
                                  ->from('online_service.antrian_loket')
                                  ->count_all_results();
                                  
-        if ($total_antrian >= 250) {
+        if ($total_antrian >= 200) {
             $this->session->set_flashdata('alert_message', 
-                'Mohon maaf, antrian untuk tanggal ' . $date_visit . ' sudah penuh (maksimal 250 antrian). 
+                'Mohon maaf, antrian untuk tanggal ' . $date_visit . ' sudah penuh (maksimal 200 antrian). 
                 Silahkan pilih tanggal kunjungan lain. Mohon baca PENGUMUMAN');
             redirect('home/');
             return;
@@ -497,7 +497,7 @@ class Antrian extends CI_Controller
                     'date_visit' => $date_visit,
                     'no_antrian' => $no_antrian,
                     'phone' => $phone,
-                    'created_at' => date('Y-m-d H:i:s'),
+                 //   'created_at' => date('Y-m-d H:i:s'),
                     'status_antrian' => 0
                 );
                 // die(print_r($data));
@@ -643,7 +643,7 @@ class Antrian extends CI_Controller
                     'date_visit' => $date_visit,
                     'no_antrian' => $no_antrian,
                     'phone' => $phone,
-                    'created_at' => date('Y-m-d H:i:s'),
+                 //  'created_at' => date('Y-m-d H:i:s'),
                     'status_antrian' => 0
                 );
 

@@ -524,7 +524,7 @@ class Antrian_model extends CI_Model
         $total_antrian = $this->db->where('date_visit', $date_visit)
             ->count_all_results('online_service.antrian_loket');
         
-        return $total_antrian >= 250;
+        return $total_antrian >= 200;
     }
     
 }
