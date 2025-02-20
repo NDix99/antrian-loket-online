@@ -395,15 +395,15 @@ class Antrian extends CI_Controller
                     $this->session->set_flashdata('error_message', 'Nomor RM tidak ditemukan');
                     redirect('home/cek_rm');
                 }
-                  // Cek apakah antrian sudah penuh (maksimal 200 antrian per hari)
+                  // Cek apakah antrian sudah penuh (maksimal 150 antrian per hari)
         $date_visit = $this->input->post('date_visit');
         $total_antrian = $this->db->where('date_visit', $date_visit)
                                  ->from('online_service.antrian_loket')
                                  ->count_all_results();
                                  
-        if ($total_antrian >= 200) {
+        if ($total_antrian >= 150) {
             $this->session->set_flashdata('alert_message', 
-                'Mohon maaf, antrian untuk tanggal ' . $date_visit . ' sudah penuh (maksimal 200 antrian). 
+                'Mohon maaf, antrian untuk tanggal ' . $date_visit . ' sudah penuh (maksimal 150 antrian). 
                 Silahkan daftar lewat aplikasi JKN mobile.');
             redirect('home/');
             return;

@@ -107,7 +107,7 @@
         <div class="card p-4 border">
             <h4 class="mb-3 fw-bold text-decoration-underline">PENGUMUMAN</h4>
         <ol>
-                <li class="mb-2">Per tanggal 13 Desember 2024 Kuota Pendaftaran Pasien Poliklinik Melalui Antrian Online Berbasis Web hanya akan dilayani maksimal 200 Pasien Per Hari.</li>
+                <li class="mb-2">Per tanggal 13 Desember 2024 Kuota Pendaftaran Pasien Poliklinik Melalui Antrian Online Berbasis Web hanya akan dilayani maksimal 150 Pasien Per Hari.</li>
                 <!-- <li class="mb-2">Nomor pendaftaran online hanya berlaku untuk pasien yang sudah mempunyai Nomor Rekam Medis di RSUD Caruban, tidak berlaku bagi pasien rawat jalan IGD kecuali pasien umum.</li> -->
                 <li class="mb-2">Pasien BPJS yang tidak mendapatkan kuota antrian online berbasis web, Mendaftar menggunakan Aplikasi Mobile JKN dengan menghubungi petugas onsite yang ada di RSUD Caruban atau dapat dengan konsultasi terlebih dahulu pada no wa Duta Mobile JKN (Khoirul) <a href="https://api.whatsapp.com/send?phone=6285930456064"> 085930456064 </a>.</li>
                 <li class="mb-2">Pendaftaran melalui Mobile JKN dapat dilakukan maksimal h-30 sebelum pelayanan sampai hari H.</li>
