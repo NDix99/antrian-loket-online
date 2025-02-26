@@ -474,7 +474,7 @@ class Antrian extends CI_Controller
                 $current_no_antrian = $no_antrian;
                 $kelipatan = floor($current_no_antrian / $estimasi_pel->ticket_estimasi_pelayanan); // default 70 // 85 // 110
                 $waktu_awal = strtotime("$estimasi_pel->ticket_waktupel_start");
-                $waktu_terakhir = "11:30"; // bug input friday auto next day
+                $waktu_terakhir = "08:30"; // bug input friday auto next day
                 $waktu_estimasi_awal = date("H:i", strtotime("+{$kelipatan} hours", $waktu_awal));
                 // die(var_dump($waktu_estimasi_awal));
                 $waktu_estimasi_akhir = date("H:i", strtotime("$waktu_estimasi_awal + 1 hour"));
@@ -533,17 +533,17 @@ class Antrian extends CI_Controller
                     $no_exist = $existing_record->no_antrian;
                     $no_kelipatan = floor($no_exist / $estimasi_pel->ticket_estimasi_pelayanan); // default 70
                     $waktu_awal = strtotime("$date_input 06:30:00");
-                    $waktu_terakhir = "11:30";
-                    $waktu_estimasi_awal = date("H:i", strtotime("+{$no_kelipatan} hours", $waktu_awal));
-                    $waktu_estimasi_akhir = date("H:i", strtotime("$waktu_estimasi_awal + 1 hour"));
+                    $waktu_terakhir = strtotime("$date_input 08:30:00");
+                    $waktu_estimasi_awal = strtotime("+{$no_kelipatan} hours", $waktu_awal);
+                    $waktu_estimasi_akhir = strtotime("+1 hour", $waktu_estimasi_awal);
                     $day_of_week = date("l", strtotime($date_visit)); // Get the day of the week
 
                     if ($day_of_week == "Friday") {
-                        $waktu_estimasi = "06:30" . " - " . $waktu_terakhir;
-                    } elseif ($waktu_estimasi_awal > $waktu_terakhir) {
-                        $waktu_estimasi = $waktu_terakhir . " - Selesai";
+                        $waktu_estimasi = "06:30 - 08:30";
+                    } elseif ($waktu_estimasi_awal >= $waktu_terakhir) {
+                        $waktu_estimasi = "06:30 - 08:30";
                     } else {
-                        $waktu_estimasi = $waktu_estimasi_awal . " - " . $waktu_estimasi_akhir;
+                        $waktu_estimasi = date("H:i", $waktu_estimasi_awal) . " - " . date("H:i", $waktu_estimasi_akhir);
                     }
 
                     $exist_data = [

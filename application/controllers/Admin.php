@@ -35,7 +35,7 @@ class Admin extends CI_Controller
         $kelipatan = floor($no_antrian / $estimasi_pel); // default 70 // 85 // 110
         $waktu_awal = date("H:i", strtotime($estimasi->ticket_waktupel_start));
         // die(var_dump($waktu_awal));
-        $waktu_akhir = "11:30"; // bug input friday auto next day
+        $waktu_akhir = "08:30"; // bug input friday auto next day
         $waktu_estimasi_awal = date("H:i", strtotime("+$kelipatan hours", strtotime($waktu_awal)));
         // die(var_dump($waktu_estimasi_awal));
         $waktu_estimasi_akhir = date("H:i", strtotime("$waktu_estimasi_awal + 1 hour"));

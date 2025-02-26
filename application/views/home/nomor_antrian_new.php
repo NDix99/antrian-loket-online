@@ -92,7 +92,7 @@ $date_visit = str_replace(array_keys($months), array_values($months), $date_visi
                                     <div class="col-6" align="left">Waktu Pelayanan :</div>
                                     <div class="col-6 fw-bold" align="right">
                                         <!-- 06:30 - 13:00 -->
-                                        <?= $waktu_pelayanan; ?>
+                                        <?= "06:30 - 08:30"; ?>
                                         <!-- 07:00 - Selesai -->
                                     </div>
                                 </div>
